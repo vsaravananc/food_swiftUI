@@ -8,14 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isSplashPresented: Bool = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 122, height: 59)
+            .navigationDestination(isPresented: $isSplashPresented, destination: {
+                SplashView()
+            })
         }
-        .padding()
+        .onAppear{
+            navigateToSplash()
+        }
+    }
+    
+    func navigateToSplash() {
+        Task{
+          try? await Task.sleep(for: .seconds(2))
+          isSplashPresented = true
+        }
     }
 }
 

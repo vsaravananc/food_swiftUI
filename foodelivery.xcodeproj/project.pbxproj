@@ -94,6 +94,9 @@
 			);
 			mainGroup = EBB0D1872FC9E5DD00EE2798;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EB12A2992FCDFB8F0087786E /* XCRemoteSwiftPackageReference "SwiftPinput" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EBB0D1912FC9E5DD00EE2798 /* Products */;
 			projectDirPath = "";
@@ -320,6 +323,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB12A2992FCDFB8F0087786E /* XCRemoteSwiftPackageReference "SwiftPinput" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hadiuzzaman524/SwiftPinput.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = EBB0D1882FC9E5DD00EE2798 /* Project object */;
 }

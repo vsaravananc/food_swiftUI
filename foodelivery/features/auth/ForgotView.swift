@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ForgotView: View {
     @Environment(\.dismiss) private var dismiss
+    @State var isValid: Bool = false
     @State var email: String = ""
     var body: some View {
         NavigationStack {
@@ -46,7 +47,9 @@ struct ForgotView: View {
                                     
                                 
                                     
-                                    customButtonView(label: "Send Code", action: {})
+                                    customButtonView(label: "Send Code", action: {
+                                        isValid = true
+                                    })
                                     
                                     Spacer()
                                 }.padding()
@@ -68,6 +71,9 @@ struct ForgotView: View {
                                .foregroundStyle(.black)
                        })
                     })
+                })
+                .navigationDestination(isPresented: $isValid, destination: {
+                    OtpView()
                 })
         }
 

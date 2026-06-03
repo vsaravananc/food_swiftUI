@@ -62,13 +62,13 @@ struct LoginView : View {
                                         
                                         Spacer()
                                         
-                                       NavigationLink(destination: {
-                                           ForgotView()
-                                       }, label: {
-                                           Text("Forgot Password")
-                                               .font(.footnote)
-                                               .foregroundStyle(.orange)
-                                       })
+                                        NavigationLink(destination: {
+                                            ForgotView()
+                                        }, label: {
+                                            Text("Forgot Password")
+                                                .font(.footnote)
+                                                .foregroundStyle(.orange)
+                                        })
                                     }
                                     
                                     customButtonView(label: "Login", action: {
@@ -79,10 +79,16 @@ struct LoginView : View {
                                     
                                     HStack{
                                         Text("Don't have an account?")
-                                            
-                                        Text("Sign Up")
-                                            .fontWeight(.medium)
-                                            .foregroundStyle(.orange)
+                                        
+                                        
+                                        
+                                        NavigationLink(destination: {
+                                            SignInView()
+                                        }, label: {
+                                            Text("Sign Up")
+                                                .fontWeight(.medium)
+                                                .foregroundStyle(.orange)
+                                        })
                                     }
                                     .font(.callout)
                                     

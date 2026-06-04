@@ -12,7 +12,7 @@ struct LoginView : View {
     @State var email: String = ""
     @State var password: String = ""
     @State var showPassword: Bool = false
-    
+    @State var navHome: Bool = false
     
     
     var body: some View {
@@ -72,7 +72,7 @@ struct LoginView : View {
                                     }
                                     
                                     customButtonView(label: "Login", action: {
-                                        
+                                        navHome.toggle()
                                     })
                                     
                                     Spacer()
@@ -128,6 +128,9 @@ struct LoginView : View {
                 }
                 .ignoresSafeArea()
                 .navigationBarBackButtonHidden()
+                .navigationDestination(isPresented: $navHome, destination: {
+                    HomeView()
+                })
         }
     }
 }

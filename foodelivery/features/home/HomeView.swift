@@ -14,6 +14,7 @@ struct HomeView : View {
             VStack(spacing: 12) {
                HomeHeaderView()
                HomeSearchView()
+               HomeCategoryView()
                 Text("Hello, World!")
             }
         }

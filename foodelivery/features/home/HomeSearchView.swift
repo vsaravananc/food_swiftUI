@@ -18,7 +18,7 @@ struct HomeSearchView: View {
             }
             
             RoundedRectangle(cornerRadius: 8)
-                .frame(width: .infinity, height: 65)
+                .frame(width: .infinity, height: 60)
                 .foregroundStyle(.gray.opacity(0.2))
                 .overlay(alignment:.leading){
                     HStack{

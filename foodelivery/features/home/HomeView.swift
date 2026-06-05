@@ -9,15 +9,27 @@ import SwiftUI
 
 
 struct HomeView : View {
+    private var restarunList : [RestaruntStructModel] = [
+        RestaruntStructModel(title: "Rose garden restaurant", subtitle: "Burger - Chiken - Riche - Wings ", rating: "4.7", time: "Free", distance: "20 min"), RestaruntStructModel(title: "Rose garden restaurant", subtitle: "Burger - Chiken - Riche - Wings ", rating: "4.7", time: "Free", distance: "20 min"),
+        RestaruntStructModel(title: "Rose garden restaurant", subtitle: "Burger - Chiken - Riche - Wings ", rating: "4.7", time: "Free", distance: "20 min"),
+        RestaruntStructModel(title: "Rose garden restaurant", subtitle: "Burger - Chiken - Riche - Wings ", rating: "4.7", time: "Free", distance: "20 min"),
+        RestaruntStructModel(title: "Rose garden restaurant", subtitle: "Burger - Chiken - Riche - Wings ", rating: "4.7", time: "Free", distance: "20 min")
+    ]
     var body: some View {
-        ScrollView {
+        ScrollView (.vertical){
             VStack(spacing: 12) {
-               HomeHeaderView()
-               HomeSearchView()
-               HomeCategoryView()
-                Text("Hello, World!")
+                HomeHeaderView()
+                HomeSearchView()
+                HomeCategoryView()
+                VStack(alignment: .leading, spacing: 18){
+                    ForEach(0..<restarunList.count,id:\.self) { index in
+                        HomeCardView(resturant: restarunList[index])
+                            .frame(maxWidth: .infinity,minHeight: 300)
+                    }
+                }
             }
-        }
+        }.scrollIndicators(.hidden)
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -10,11 +10,17 @@ import SwiftUI
 struct SearchView: View {
     var body: some View {
         ScrollView(.vertical){
-            VStack(spacing: 15){
+            VStack(spacing: 18){
                 SearchHeaderView()
                 SearchBarView()
+                SearchRecentView()
+                SearchRecentRestaruntView()
+                
             }
-        }.scrollIndicators(.hidden)
+        }
+        .ignoresSafeArea(.all,edges: [.bottom])
+        .scrollIndicators(.hidden)
+        .navigationBarBackButtonHidden()
     }
 }
 

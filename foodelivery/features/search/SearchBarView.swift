@@ -16,8 +16,11 @@ struct SearchBarView: View {
                 HStack{
                     Image(systemName: "magnifyingglass")
                     Text( "Search dishes and restaurants")
+                    Spacer()
+                    Image(systemName: "xmark.circle")
+                        .foregroundStyle(Color.gray)
                         
-                }.padding(.leading,10)
+                }.padding(.horizontal,10)
             }
             .frame(maxWidth: .infinity,minHeight: 70)
             .padding(.horizontal,16)

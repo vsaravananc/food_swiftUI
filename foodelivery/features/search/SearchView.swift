@@ -15,7 +15,7 @@ struct SearchView: View {
                 SearchBarView()
                 SearchRecentView()
                 SearchRecentRestaruntView()
-                
+                SearchGridProductView()
             }
         }
         .ignoresSafeArea(.all,edges: [.bottom])

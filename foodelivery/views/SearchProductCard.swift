@@ -14,7 +14,7 @@ struct SearchProductCard: View {
         VStack(alignment:.leading){
             RoundedRectangle(cornerRadius: 8)
                 .frame(maxWidth: .infinity,minHeight: 100)
-                .foregroundStyle(Color.gray)
+                .foregroundStyle(Color.gray.opacity(0.3))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
             
             Text(title)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct SearchHeaderView: View {
+    var perform : () -> Void
     public var body: some View {
         HStack{
             Image(systemName: "chevron.left")
@@ -17,6 +18,7 @@ public struct SearchHeaderView: View {
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .clipShape(.circle)
+                .onTapGesture(perform: perform)
             
             Text("Search")
                 .font(.title2)
@@ -46,5 +48,7 @@ public struct SearchHeaderView: View {
 
 
 #Preview {
-    SearchHeaderView()
+    SearchHeaderView(perform: {
+        
+    })
 }

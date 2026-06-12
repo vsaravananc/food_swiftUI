@@ -40,7 +40,7 @@ struct SearchRecentButtonView: View {
              .cornerRadius(30)
              .overlay(
                      RoundedRectangle(cornerRadius: 30)
-                     .stroke(.gray,lineWidth: 2)
+                     .stroke(.gray,lineWidth: 1)
                  )
     }
 }

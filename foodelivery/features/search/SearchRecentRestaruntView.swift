@@ -19,7 +19,7 @@ struct SearchRecentRestaruntView: View {
                 
                 HStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray)
+                        .fill(Color.gray.opacity(0.3))
                         .frame(width: 95, height: 80)
                     
                     VStack(alignment:.leading,spacing: 5){
@@ -50,7 +50,7 @@ struct SearchRecentRestaruntView: View {
                 
                 HStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray)
+                        .fill(Color.gray.opacity(0.3))
                         .frame(width: 95, height: 80)
                     
                     VStack(alignment:.leading,spacing: 5){
@@ -81,7 +81,7 @@ struct SearchRecentRestaruntView: View {
                 
                 HStack{
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(Color.gray)
+                        .fill(Color.gray.opacity(0.3))
                         .frame(width: 95, height: 80)
                     
                     VStack(alignment:.leading,spacing: 5){

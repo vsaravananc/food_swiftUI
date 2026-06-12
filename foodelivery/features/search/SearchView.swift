@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct SearchView: View {
+    @Environment(\.dismiss) private var dismiss
     var body: some View {
         ScrollView(.vertical){
             VStack(spacing: 18){
-                SearchHeaderView()
+                SearchHeaderView(perform: {
+                    dismiss()
+                })
                 SearchBarView()
                 SearchRecentView()
                 SearchRecentRestaruntView()

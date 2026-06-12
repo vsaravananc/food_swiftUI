@@ -15,7 +15,8 @@ struct HomeSearchView: View {
                 Text("Hey Halal,")
                 Text("Good Afternoon!")
                     .font(.headline)
-            }
+                    
+            }.foregroundStyle(.black)
             
             RoundedRectangle(cornerRadius: 8)
                 .frame(width: .infinity, height: 60)
@@ -26,8 +27,10 @@ struct HomeSearchView: View {
                         Text("Search for restaurants")
                             .font(.headline)
                             .fontWeight(.medium)
-                            .foregroundStyle(.gray)
-                    }.padding(.horizontal)
+                            
+                    }
+                    .foregroundStyle(.gray)
+                    .padding(.horizontal)
                 }
         }.padding(.horizontal)
     }
